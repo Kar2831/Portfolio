@@ -5,16 +5,24 @@ export default function Header(){
 
     const [toggleMenu,setToggleMenu] = useState(false)
 
+    const menus = [
+        {href : '#',text:"Home" },
+        {href : '#',text:"About" },
+        {href : '#',text:"Projects" },
+        {href : '#',text:"Resume" },
+        {href : '#',text:"Contact" },
+    ]
+
     return(
         <header className="flex justify-between px-5 py-2 bg-primary">
             <a className="font-bold text-black" href="#" >Karthikeyan M</a>
             <nav className="hidden md:block">
-                <ul className="flex text-white">
-                    <li><a href="/" >Home</a></li>
-                    <li><a href="#about" >About</a></li>
-                    <li><a href="#projects" >Projects</a></li>
-                    <li><a href="#resume" >Resume</a></li>
-                    <li><a href="#contact" >Contact</a></li>
+                <ul className="flex text-white gap-5">
+                        {
+                            menus.map((menu,index)=>(
+                                    <a key={index} href={menu.href}>{menu.text}</a>
+                            ))
+                        }
                 </ul>
             </nav>
             { toggleMenu && <nav className="block md:hidden">

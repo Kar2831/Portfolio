@@ -15,9 +15,11 @@ export default function Hero() {
   return (
     <section className='flex px-5 py-32 bg-primary justify-center flex-col items-center space-y-10 md:flex-row'>
         <div className='md:w-1/2 flex flex-col'>
-            <h1 className='text-white text-4xl font-hero-font flex'>Hi,<br/>Im Karthikeyan.M
-            <p className='text-2xl'>{config.subtitle}</p>
-            </h1>
+             <h1 className='text-white text-4xl font-hero-font'>
+              Hi,<br/>Im Karthikeyan.M  <br/>
+              <p className='text-2xl'>{config.subtitle}</p>
+              </h1>
+
             <div className='flex md:py-10'>
                 <a className='pr-5 hover:text-white' href={config.social.twitter}>{<AiOutlineTwitter size={40}/>}</a>
                 <a className='pr-5 hover:text-white' href={config.social.facebook}>{<AiOutlineFacebook size={40} />}</a>
